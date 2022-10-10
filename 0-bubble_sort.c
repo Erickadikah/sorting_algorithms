@@ -9,18 +9,22 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i, j;
+	int i, newn, n;
 
-	for (i = size - 1; i > 0; i--)
+	n = size;
+	while (n > 0)
 	{
-		for (j = 0; j < i; j++)
+		newn = 0;
+		for (i = 1; i < n; i++)
 		{
-			if (array[j] > array[j + 1])
+			if (array[i - 1] > array[i])
 			{
-				swapping(&array[j], &array[j + 1]);
+				swapping(&array[i - 1], &array[i]);
 				print_array(array, size);
+				newn = i;
 			}
 		}
+		n = newn;
 	}
 }
 /**
