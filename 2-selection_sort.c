@@ -1,19 +1,4 @@
 #include "sort.h"
-
-/**
- * swap_int - swap two intergers in an array.
- * @a: the first interger to swap.
- * @b: The second interger to swap.
- */
-void swap_ints(int *a, int *b)
-{
-	int tmp;
-
-	tmp = *num1;
-	*num1 = *num2;
-	*num2 = tmp;
-}
-
 /**
  * selection_sort - sorts an array in ascending order
  * by seelecting the smallest element from the unsoretd list
@@ -38,8 +23,11 @@ void selection_sort(int *array, size_t size)
 		}
 		if (min != i)
 		{
-			swap(&array[min], &array[i]);
+			temp = array[j];
+			array[j] = array[min];
+			array[min] = temp;
 			print_array(array, size);
 		}
 	}
 }
+
