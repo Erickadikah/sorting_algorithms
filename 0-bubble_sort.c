@@ -9,7 +9,7 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i, newn, n;
+	int i, newn, n, temp;
 
 	if (array == NULL || size <= 1)
 		return;
@@ -21,7 +21,9 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i - 1] > array[i])
 			{
-				swapping(&array[i - 1], &array[i]);
+				temp = array[i - 1];
+				array[i - 1] = array[i];
+				array[i] = temp;
 				print_array(array, size);
 				newn = i;
 			}
@@ -29,16 +31,4 @@ void bubble_sort(int *array, size_t size)
 		n = newn;
 	}
 }
-/**
- * swapping - function that swaps two integers
- * @a: first integer
- * @b: second integer
- */
-void swapping(int *a, int *b)
-{
-	int temp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}
