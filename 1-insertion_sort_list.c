@@ -1,8 +1,8 @@
 #include "sort.h"
+
 /**
- * insertion_sort fuction that sorts an arr of intergers
- * @h1: A poiter to the head of the doubly-linked list.
- * @n2: The second node to swap.
+ * insertion_sort_list - inserts right unsorted side into left sorted side
+ * @list: doubly linked list to sort
  *
  */
 void insertion_sort_list(listint_t **list)
