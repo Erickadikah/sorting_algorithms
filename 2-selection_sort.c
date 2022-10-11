@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap_int - swap two intergers in an array.
+ * swapping - swap two intergers in an array.
  * @a: the first interger to swap.
  * @b: The second interger to swap.
  */
@@ -28,7 +28,7 @@ void selection_sort(int *array, size_t size)
 {
 	size_t i, j, min;
 
-	if (!(*array) || array == NULL || size < 2)
+	if (!(*array) || array == NULL)
 		return;
 	for (i = 0; i < size - 1; i++)
 	{
