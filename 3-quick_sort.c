@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * swap - swaps two numbers
- * @num1: first number
- * @num2: second number
+ * swapping - swaps two numbers
+ * @a: first number
+ * @b: second number
  */
-void swap(int *num1, int *num2)
+void swapping(int *a, int *b)
 {
 	int tmp = *num1;
 	*num1 = *num2;
@@ -15,12 +15,12 @@ void swap(int *num1, int *num2)
 /**
  * partition - find partition position
  * @array: array of interger
- * @loww: lower bound of array
+ * @low: lower bound of array
  * @high: higher bound of array
  * @size: number of elememnts in @array
  *
  * Return: position of pivot
- */
+ **/
 int partition(int *array, int low, int high, size_t size)
 {
 	/* elect the last right element as pivot*/
@@ -28,20 +28,20 @@ int partition(int *array, int low, int high, size_t size)
 	/* points to the greater element */
 	int ptr = low;
 	int j;
-	/*
+	/**
 	 * traversing acreoss each element in an array and
 	 * compare them with pivot
-	 */
+	 **/
 	for (j = low; j < high; j++)
 	{
 		if (array[j] <= pivot)
 		{
 			if (ptr != j)
 			{
-				/* if elememnt smaller than pivot is found
+				/** if elememnt smaller than pivot is found
 				 * swap it with the greater element poited by i
-				 */
-				swap(&array[ptr], &array[j]);
+				 **/
+				swapping(&array[ptr], &array[j]);
 				print_array(array, size);
 			}
 			ptr++;
@@ -50,16 +50,16 @@ int partition(int *array, int low, int high, size_t size)
 	/*swap the pivot element with the greater element at i */
 	if (ptr != high)
 	{
-		swap(&array[ptr], &array[high]);
+		swapping(&array[ptr], &array[high]);
 		print_array(array, size);
 	}
 	return (ptr);
 }
 
 /**
- * partition - find partition position
+ * quicksort - find partition position
  * @array: array of interger
- * @loww: lower bound of array
+ * @low: lower bound of array
  * @high: higher bound of array
  * @size: number of elememnts in @array
  */
@@ -67,15 +67,16 @@ void quicksort(int *array, int low, int high, size_t size)
 {
 	int pivot;
 
-	if(low < high)
+	if (low < high)
 	{
 		pivot = partition(array, low, high, size);
 		quicksort(array, low, pivot - 1, size);
 		quicksort(array, pivot + 1, high, size);
 	}
 }
+
 /**
- * quick_sort quick sorts an array
+ * quick_sort - quick sorts an array
  * @array: array to sort
  * @size: size of array
  */
