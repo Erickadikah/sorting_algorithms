@@ -7,9 +7,9 @@
  */
 void swapping(int *a, int *b)
 {
-	int tmp = *num1;
-	*num1 = *num2;
-	*num2 = tmp;
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -38,7 +38,8 @@ int partition(int *array, int low, int high, size_t size)
 		{
 			if (ptr != j)
 			{
-				/** if elememnt smaller than pivot is found
+				/**
+				 *if elememnt smaller than pivot is found
 				 * swap it with the greater element poited by i
 				 **/
 				swapping(&array[ptr], &array[j]);
