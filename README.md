@@ -1,5 +1,5 @@
-0x1B. C - Sorting algorithms & Big O
-C
+<h2>C - Sorting algorithms & Big O</h2>
+<p>C
 Algorithm
 Data structure
  By: Alexandre Gautier
@@ -7,24 +7,23 @@ Data structure
  Project to be done in teams of 2 people (your team: Erick Adikah, Arinze Nwutobo)
  Project will start Oct 5, 2022 6:00 AM, must end by Oct 12, 2022 6:00 AM
  was released at Oct 7, 2022 12:00 AM
- An auto review will be launched at the deadline
+ An auto review will be launched at the deadline</p>
 
 
 
-Background Context
-This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
+<h3>Background Context</h3>
+<p>This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.</p>
 
-Resources
-Read or watch:
-
+<h3>Resources</h3>
+<p>Read or watch:
 Sorting algorithm
 Big O notation
 Sorting algorithms animations
 15 sorting algorithms in 6 minutes (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
-General
+</p>
+<p>General
 At least four different sorting algorithms
 What is the Big O notation, and how to evaluate the time complexity of an algorithm
 How to select the best sorting algorithm for a given input
@@ -51,10 +50,9 @@ All your header files should be include guarded
 A list/array does not need to be sorted if its size is less than 2.
 GitHub
 There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
-
-More Info
-Data Structure and Functions
-For this project you are given the following print_array, and print_list functions:
+</p>
+<h3>Data Structure and Functions</h3>
+<p>For this project you are given the following print_array, and print_list functions:</p>
 #include <stdlib.h>
 #include <stdio.h>
 
