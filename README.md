@@ -1,4 +1,4 @@
-<h2>C - Sorting algorithms & Big O</h2>
+<h2 text-align: center>C - Sorting algorithms & Big O</h2>
 <p>C
 Algorithm
 Data structure
